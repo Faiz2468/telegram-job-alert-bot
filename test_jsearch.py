@@ -2,7 +2,6 @@ import os
 import requests
 from dotenv import load_dotenv
 
-# Load .env file
 load_dotenv()
 
 RAPIDAPI_KEY = os.getenv("JSEARCH_API_KEY")

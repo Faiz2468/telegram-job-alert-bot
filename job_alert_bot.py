@@ -10,18 +10,14 @@ from telegram.ext import (
     filters,
 )
 
-# ======================
 # CONFIGURATION & LOGGING
-# ======================
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     level=logging.INFO,
 )
 logger = logging.getLogger(__name__)
 
-# ======================
 # BOT COMMAND HANDLERS
-# ======================
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Send a welcome message and list commands."""
     await update.message.reply_text(
@@ -63,9 +59,7 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Handle normal text messages."""
     await update.message.reply_text("💡 I only understand commands. Use /help to see options.")
 
-# ======================
 # MAIN FUNCTION
-# ======================
 def main():
     # Load environment variables
     load_dotenv()
